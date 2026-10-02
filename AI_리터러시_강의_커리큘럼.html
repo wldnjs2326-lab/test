@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 리터러시 강의 커리큘럼</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1f2a37;
+    --muted: #5b6776;
+    --line: #dfe7ee;
+    --accent: #14b8a6;
+    --accent-dark: #0f766e;
+    --accent-soft: #e6f7f5;
+    --zebra: #f7fbfb;
+    --paper: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    color: var(--ink);
+    background: #eef3f5;
+    line-height: 1.6;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    max-width: 1080px;
+    margin: 40px auto;
+    background: var(--paper);
+    padding: 56px 56px 44px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(15, 118, 110, 0.08);
+  }
+  header {
+    border-left: 8px solid var(--accent);
+    padding-left: 22px;
+    margin-bottom: 36px;
+  }
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--accent-dark);
+    margin-bottom: 6px;
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+  }
+  .meta {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+  .chip {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent-dark);
+    background: var(--accent-soft);
+    padding: 4px 12px;
+    border-radius: 999px;
+  }
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 14.5px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  thead th {
+    background: var(--accent-dark);
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+  thead th.center, td.center { text-align: center; }
+  tbody td {
+    padding: 16px;
+    vertical-align: top;
+    border-top: 1px solid var(--line);
+  }
+  tbody tr:nth-child(even) td { background: var(--zebra); }
+  .round {
+    display: inline-block;
+    min-width: 54px;
+    font-weight: 700;
+    color: var(--accent-dark);
+    background: var(--accent-soft);
+    border-radius: 8px;
+    padding: 4px 8px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .topic { font-weight: 700; font-size: 15px; white-space: nowrap; }
+  .term { color: var(--muted); font-size: 13px; }
+  .time { font-weight: 700; white-space: nowrap; }
+  tfoot td {
+    padding: 14px 16px;
+    border-top: 2px solid var(--accent);
+    background: var(--accent-soft);
+    font-weight: 700;
+    color: var(--accent-dark);
+  }
+  footer {
+    margin-top: 18px;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  col.c1 { width: 9%; }
+  col.c2 { width: 17%; }
+  col.c3 { width: 36%; }
+  col.c4 { width: 28%; }
+  col.c5 { width: 10%; }
+
+  @media (max-width: 720px) {
+    .page { margin: 0; padding: 28px 16px; border-radius: 0; }
+    h1 { font-size: 28px; }
+    table { font-size: 13px; }
+    .topic { white-space: normal; }
+    .table-wrap { overflow-x: auto; }
+  }
+
+  @page { size: A4 landscape; margin: 14mm; }
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; padding: 0; max-width: none; box-shadow: none; border-radius: 0; }
+    h1 { font-size: 32px; }
+    table { font-size: 12.5px; }
+    tbody td { padding: 12px 14px; }
+    tr { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="eyebrow">CURRICULUM</div>
+      <h1>AI 리터러시 강의 커리큘럼</h1>
+      <div class="meta">
+        <span class="chip">총 5회차</span>
+        <span class="chip">회당 120분</span>
+        <span class="chip">총 10시간</span>
+      </div>
+    </header>
+
+    <div class="table-wrap">
+    <table>
+      <colgroup>
+        <col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5">
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="center">회차</th>
+          <th>강의주제</th>
+          <th>핵심내용</th>
+          <th>실습활동</th>
+          <th class="center">소요시간</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="center"><span class="round">1회차</span></td>
+          <td class="topic">AI 개요</td>
+          <td>생성형 AI <span class="term">(글·이미지 등을 새로 만들어내는 AI)</span>의 개념, 활용 사례, 프롬프트 <span class="term">(AI에게 주는 지시문)</span> 작성 기초</td>
+          <td>ChatGPT 가입 및 질문·요약·글쓰기 체험</td>
+          <td class="center time">120분</td>
+        </tr>
+        <tr>
+          <td class="center"><span class="round">2회차</span></td>
+          <td class="topic">이미지 생성 AI</td>
+          <td>이미지 생성 AI 원리, 원하는 결과를 얻는 프롬프트 작성법</td>
+          <td>캔바 <span class="term">(온라인 디자인 도구)</span> AI 기능으로 포스터·카드뉴스 제작</td>
+          <td class="center time">120분</td>
+        </tr>
+        <tr>
+          <td class="center"><span class="round">3회차</span></td>
+          <td class="topic">유튜브 영상 제작 AI</td>
+          <td>AI 기반 영상 편집 흐름 (대본 → 자막 → 편집), 숏폼 <span class="term">(1분 이내 짧은 영상)</span> 기획</td>
+          <td>Vrew <span class="term">(AI 자막·편집 프로그램)</span>로 짧은 영상 1편 제작</td>
+          <td class="center time">120분</td>
+        </tr>
+        <tr>
+          <td class="center"><span class="round">4회차</span></td>
+          <td class="topic">AI 윤리와 저작권</td>
+          <td>AI 결과물의 저작권 귀속, 개인정보 보호, 허위정보·편향 문제</td>
+          <td>사례 토론: 사용 가능 / 불가 콘텐츠 판별하기</td>
+          <td class="center time">120분</td>
+        </tr>
+        <tr>
+          <td class="center"><span class="round">5회차</span></td>
+          <td class="topic">나만의 AI 활용 계획</td>
+          <td>1~4회차 학습 내용 종합, 업무·일상 적용 방안 정리</td>
+          <td>개인별 AI 활용 계획 발표 및 피드백</td>
+          <td class="center time">120분</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td class="center">합계</td>
+          <td colspan="3"></td>
+          <td class="center">600분 (10시간)</td>
+        </tr>
+      </tfoot>
+    </table>
+    </div>
+
+    <footer>※ 회차별 소요시간은 수강 인원 및 운영 환경에 따라 조정될 수 있습니다.</footer>
+  </div>
+</body>
+</html>
